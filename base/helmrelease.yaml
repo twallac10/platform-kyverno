@@ -1,14 +1,14 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: __APP__
-  namespace: __APP__
+  name: kyverno
+  namespace: kyverno
 spec:
   interval: 10m
-  releaseName: __APP__
+  releaseName: kyverno
   chartRef:
     kind: OCIRepository
-    name: __APP__
+    name: kyverno
   install:
     crds: CreateReplace
     remediation:
